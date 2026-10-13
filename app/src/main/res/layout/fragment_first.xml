@@ -7,6 +7,61 @@
     android:background="@color/surface"
     tools:context=".FirstFragment">
 
+    <TextView
+        android:id="@+id/discover_heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="18dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="18dp"
+        android:text="@string/discover_heading"
+        android:textAppearance="?attr/textAppearanceHeadlineSmall"
+        android:textColor="@color/on_surface"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/discover_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:text="@string/discover_subtitle"
+        android:textColor="@color/on_surface_variant"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/discover_heading" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/category_toggle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        app:checkedButton="@id/popular_button"
+        app:selectionRequired="true"
+        app:singleSelection="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/discover_subtitle">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/popular_button"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/popular" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/top_rated_button"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/top_rated" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/movie_list"
         android:layout_width="0dp"
@@ -17,17 +72,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_toggle"
         tools:listitem="@layout/movie_item" />
 
     <ProgressBar
         android:id="@+id/progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/movie_list"
+        app:layout_constraintEnd_toEndOf="@id/movie_list"
+        app:layout_constraintStart_toStartOf="@id/movie_list"
+        app:layout_constraintTop_toTopOf="@id/movie_list" />
 
     <LinearLayout
         android:id="@+id/error_group"
@@ -37,10 +92,10 @@
         android:gravity="center"
         android:orientation="vertical"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintBottom_toBottomOf="@id/movie_list"
+        app:layout_constraintEnd_toEndOf="@id/movie_list"
+        app:layout_constraintStart_toStartOf="@id/movie_list"
+        app:layout_constraintTop_toTopOf="@id/movie_list">
 
         <TextView
             android:layout_width="wrap_content"

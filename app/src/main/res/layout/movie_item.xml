@@ -51,6 +51,15 @@
                 tools:text="In theaters: 2025-01-01" />
 
             <TextView
+                android:id="@+id/movie_rating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textAppearance="?attr/textAppearanceLabelLarge"
+                android:textColor="@color/on_surface_variant"
+                tools:text="★ 8.2" />
+
+            <TextView
                 android:id="@+id/movie_overview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

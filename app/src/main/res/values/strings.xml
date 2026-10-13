@@ -1,16 +1,28 @@
 <resources>
     <string name="app_name">Flixster</string>
+    <string name="discover_heading">Discover movies</string>
+    <string name="discover_subtitle">Browse popular and top-rated picks.</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="movie_details">Movie details</string>
+    <string name="overview_heading">Overview</string>
+    <string name="movie_backdrop_description">Movie artwork</string>
+    <string name="movie_poster_transition">movie_poster_transition</string>
+    <string name="movie_rating">★ %1$.1f</string>
+    <string name="movie_detail_meta">%1$s  •  ★ %2$.1f  •  %3$s</string>
+    <string name="runtime_minutes">%1$d min</string>
+    <string name="runtime_unknown">Runtime unavailable</string>
     <string name="load_error_title">Couldn’t load movies</string>
     <string name="load_error">Check your connection and try again.</string>
     <string name="retry">Retry</string>
     <string name="untitled_movie">Untitled movie</string>
     <string name="no_overview">No description available.</string>
     <string name="release_date_unknown">Release date unavailable</string>
-    <string name="release_date">In theaters: %1$s</string>
+    <string name="release_date">Release date: %1$s</string>
     <string name="movie_poster_description">Movie poster</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">Now Playing</string>
+    <string name="first_fragment_label">Discover</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
