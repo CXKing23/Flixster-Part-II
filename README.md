@@ -1,10 +1,10 @@
 # Flixster — Project 4, Part II
 
-Submitted by: **[Your name]**
+Submitted by: **Christian King**
 
 Flixster lets you browse popular and top-rated movies, then open a movie to see its artwork, rating, genres, release date, runtime, and overview.
 
-Time spent: **[Fill in] hours**
+Time spent: **4 hours**
 
 ## Required features
 
